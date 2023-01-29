@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="dashboard-content">
+    <div id="dashboard-header"> 
+    <a href="/manage/project" id="project-link">Add Project</a>
+    <div class="filter">
+        <form method="post">
+           <select name="">
+              <option value="filter" selected>Filter by:</option>
+              <option value="date">Date</option>
+              <option value="tech_stack">Tech Stack</option>
+           </select>
+        </form>
+    </div> 
+    </div>
+    <div id="projects">
+        {% for project in projects %}
+        <div class="project-container">
+            {% if project['status'] == 'development' %}
+              <span class="development"></span>
+            {% else %}
+              <span class="production"></span> 
+             {% end %}
+           <div class="project-row"><span>Project:</span> {{ project['name'] }}</div>
+           <div class="project-row"><span>Date Added:</span>  {{ project['date'] }}</div>
+           <div class="project-row"><span>Status:</span></div> 
+           <div class="project-row"><a href="">View project</a></div>
+           <div class="project-row"><a href="">Mark as completed</a></div> 
+        </div>
+        {% end %}
+
+    </div>
+</div>
+{% end %}
