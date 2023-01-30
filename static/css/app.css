@@ -22,6 +22,19 @@ header h1 {
   margin: 75px 0 0 75px;
 }
 
+nav {
+  width: 25em;
+  float: right;
+  margin-top: -25px;
+}
+
+nav a {
+    font: 900 1em Supria Sans, sans-serif;
+    color: #f5f2f2;
+    text-transform: uppercase;
+    text-decoration: none;    
+}
+
 body {
    background: rgb(26, 26, 26); 
 }
@@ -48,40 +61,40 @@ p {
 }
 
 
-#login-container input[type='text'], #login-container input[type='password'] {
+#login-container input[type='text'], #login-container input[type='password'], #project-container input[type='text'] {
     width: 100%;
     height: 45px;
     margin-bottom: 25px;
     letter-spacing: 2px;
     font: 200 1em Supria Sans, sans-serif;
+    color: #f5f2f2;
+    border: 1px solid rgba(168, 168, 168, 0.2); 
+    background: none;
+}
+
+::placeholder {
+    color: #f5f2f2;  
+    font: 200 1em Supria Sans, sans-serif;
 }
 
 
 #login-container input[type='submit'] {
-    background:rgb(116, 224, 214);
+    border: 1px solid rgb(116, 224, 214);
+    background: none;
+    color:  rgb(116, 224, 214);
     width: 100%;
-    height: 60px;
-    font: 900 1.4em Supria Sans, sans-serif;
-    border: none;
+    height: 65px;
+    letter-spacing: 2px;
+    font: 200 1em Supria Sans, sans-serif;
     cursor: pointer;
     margin-top: 25px;
 }
 
 
-#project-link {
-    background:rgb(116, 224, 214);
-    width: 100%;
-    padding: 10px 25px;
-    font: 900 1.2em Supria Sans, sans-serif;
-    border: none;
-    cursor: pointer;
-    margin-top: 25px;
-    color: rgb(26, 26, 26);
-    text-decoration: none; 
-}
+
 
 #projects {
-  width: 75em;
+  width: 100%;
 }
 
 .project-container {
@@ -132,4 +145,106 @@ p {
   background: rgb(116, 224, 214);
   border-radius: 75px;
   margin: 5px 5px 0 5px;
+}
+
+
+#dashboard-content {
+    margin: 175px auto 0 auto;
+    width: 75%;
+  }
+
+
+#dashboard-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto 75px 0;
+}
+
+#project-link {
+    padding: 10px 50px;
+    cursor: pointer;
+    text-decoration: none; 
+    margin: 50px auto 0 auto;
+    display: block;
+    text-align: center;
+    height: 30px;
+    padding-top: 20px;
+    width: 25%;
+    border: 1px solid rgb(116, 224, 214);
+    background: none;
+    color:  rgb(116, 224, 214);
+    letter-spacing: 2px;
+    font: 200 1em Supria Sans, sans-serif;
+}
+
+.filter form select {
+    float: right;
+    background: none;
+    border: 1px solid rgba(168, 168, 168, 0.2); 
+    width: 300px;
+    height: 40px;
+    color: #f5f2f2;
+    outline: none;
+    letter-spacing: 2px;
+    font: 200 1em Supria Sans, sans-serif;
+}
+
+#project-container {
+    margin: 175px auto 0 auto;
+    width: 75%;
+}
+
+
+#project-container form select {
+    float: right;
+    background: none;
+    border: 1px solid rgba(168, 168, 168, 0.2); 
+    width: 100%;
+    height: 40px;
+    color: #f5f2f2;
+    outline: none;
+    margin: 15px 0 50px 0;
+    letter-spacing: 2px;
+    font: 200 1em Supria Sans, sans-serif;
+}
+
+#project-container textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    letter-spacing: 2px;
+    font: 200 1em Supria Sans, sans-serif;
+    border: 1px solid rgba(168, 168, 168, 0.2); 
+    background: none;
+    color: #f5f2f2;
+}
+
+#project-container input[type='button'] {
+    border: 1px solid rgb(116, 224, 214);
+    background: none;
+    color:  rgb(116, 224, 214);
+    width: 100%;
+    height: 65px;
+    letter-spacing: 2px;
+    font: 200 1em Supria Sans, sans-serif;
+    cursor: pointer;
+    margin: 25px 0;
+}
+
+#project-container input[type='submit'] {
+    border: 1px solid rgb(116, 224, 214);
+    background: none;
+    color:  rgb(116, 224, 214);
+    width: 100%;
+    height: 65px;
+    letter-spacing: 2px;
+    font: 200 1em Supria Sans, sans-serif;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+input, textarea {
+   outline: none; 
 }

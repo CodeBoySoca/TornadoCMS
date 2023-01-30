@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <div id="dashboard-content">
     <div id="dashboard-header"> 
-    <a href="/manage/project" id="project-link">Add Project</a>
     <div class="filter">
         <form method="post">
            <select name="">
               <option value="filter" selected>Filter by:</option>
-              <option value="date">Date</option>
+              <option value="date"> Date</option>
               <option value="tech_stack">Tech Stack</option>
            </select>
         </form>
@@ -23,12 +23,13 @@
              {% end %}
            <div class="project-row"><span>Project:</span> {{ project['name'] }}</div>
            <div class="project-row"><span>Date Added:</span>  {{ project['date'] }}</div>
-           <div class="project-row"><span>Status:</span></div> 
+           <div class="project-row"><span>Status: </span>{{ project['status'] }}</div> 
+           <div class="project-row">{{ project['tech_stack'] }}</div> 
            <div class="project-row"><a href="">View project</a></div>
            <div class="project-row"><a href="">Mark as completed</a></div> 
         </div>
         {% end %}
-
+        <a href="/manage/project" id="project-link">Add Project</a>
     </div>
 </div>
 {% end %}
