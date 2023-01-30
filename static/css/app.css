@@ -17,7 +17,7 @@ header .fa-tornado {
   color: rgb(116, 224, 214);  
 }
 
-header h1 {
+header h1  {
   font: 700 1.8em Supria Sans, sans-serif;
   margin: 75px 0 0 75px;
 }
@@ -195,10 +195,14 @@ p {
     font: 200 1em Supria Sans, sans-serif;
 }
 
-#project-container {
+#project-container, #server-container {
     margin: 175px auto 0 auto;
     width: 75%;
 }
+
+
+
+
 
 
 #project-container form select {
@@ -253,3 +257,7 @@ p {
 input, textarea {
    outline: none; 
 }
+
+#project-container h1, #server-container h1, #dashboard-content h1   {
+    margin: 0 0 25px 0;
+  }
