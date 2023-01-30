@@ -3,7 +3,7 @@ import tornado.ioloop
 from tornado.options import define
 import tornado.web
 import motor.motor_tornado
-from handlers import user_handler, dashboard_server, server_handler, project_handler
+from handlers import user_handler, dashboard_server, server_handler, project_handler, production_handler
 
 client = motor.motor_tornado.MotorClient('mongodb://localhost:27017/tornado_cms')
 db = client.projects
@@ -21,6 +21,7 @@ urls = [
     (r'/dashboard', dashboard_server.DashboardHandler),
     (r'/manage/server', server_handler.ServerHandler),
     (r'/manage/project', project_handler.ProjectHandler),
+    (r'/manage/production', production_handler.ProductionHandler)
 ]
 
 class TornadoApp(tornado.web.Application):

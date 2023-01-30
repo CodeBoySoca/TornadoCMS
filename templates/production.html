@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+ <div id="production-container">
+    <form method="post" action="">
+    <select name="server-hosting">
+        <option value="webhosting" selected>Web Hosting</option>
+        <option value="digital_ocean">Digital Ocean</option>
+        <option value="godaddy">GoDaddy</option>
+        <option value="heroku">Heroku</option>
+        <option value="aws">AWS</option>
+    </select>
+    <select name="database-hosting">
+        <option value="dbhosting" selected>Database Hosting</option>
+        <option value="elephant">ElephantSQL</option>
+        <option value="mongo_compass">MongoDB Compass</option>
+    </select>
+    <input type="submit" value="Send to Production">
+</form>
+<a href="/manage/server" class="add-link server">Add a Server</a>
+ </div>   
+{% end %}

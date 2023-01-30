@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-
 <div id="dashboard-content">
   <h1>Dashboard</h1> 
     <div id="dashboard-header"> 
@@ -27,10 +26,10 @@
            <div class="project-row"><span>Status: </span>{{ project['status'] }}</div> 
            <div class="project-row">{{ project['tech_stack'] }}</div> 
            <div class="project-row"><a href="">View project</a></div>
-           <div class="project-row"><a href="">Mark as completed</a></div> 
+           <div class="project-row"><a href="/manage/production">Mark as completed</a></div> 
         </div>
         {% end %}
-        <a href="/manage/project" id="project-link">Add Project</a>
+        <a href="/manage/project" class="add-link">Add Project</a>
     </div>
 </div>
 {% end %}
