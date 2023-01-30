@@ -61,7 +61,12 @@ p {
 }
 
 
-#login-container input[type='text'], #login-container input[type='password'], #project-container input[type='text'] {
+#login-container input[type='text'], 
+#login-container input[type='password'], 
+#project-container input[type='text'],
+#server-container input[type='text'],  
+#server-container input[type='url'],
+#server-container input[type='password'] {
     width: 100%;
     height: 45px;
     margin-bottom: 25px;
@@ -233,7 +238,7 @@ p {
     margin: 25px 0;
 }
 
-#project-container input[type='submit'] {
+#project-container input[type='submit'], #server-container input[type='submit']  {
     border: 1px solid rgb(116, 224, 214);
     background: none;
     color:  rgb(116, 224, 214);
