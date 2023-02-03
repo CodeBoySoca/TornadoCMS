@@ -259,3 +259,49 @@ input, textarea {
 #project-container h1, #server-container h1, #dashboard-content h1   {
     margin: 0 0 25px 0;
   }
+
+
+.overlay {
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0, 0.7);
+   z-index: 99999;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+#message-popup {
+  margin: 25% auto 0 auto;
+  width: 350px;
+  height: 135px;
+  background: #1f1f1f;
+  padding: 25px;
+
+}
+
+#message-popup h3 {
+    font: 900 1.2em Supria Sans, sans-serif;
+    text-align: center;
+    color: #fafafa;
+    margin: 0 0 15px 0;
+}
+
+#message-popup p {
+    font: 300 1em Supria Sans, sans-serif;
+    text-align: center;
+    color: #fafafa;
+}
+
+#message-popup button {
+    font: 900 1em Supria Sans, sans-serif;
+    background: rgb(116, 224, 214);
+    color: rgb(26, 26, 26);
+    border: none;
+    text-transform: uppercase;
+    width: 220px;
+    height: 45px;
+    margin: 20px auto 0 auto;
+    display: block;
+    cursor: pointer;
+}
