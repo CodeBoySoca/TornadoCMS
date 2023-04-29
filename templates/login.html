@@ -3,9 +3,11 @@
 <div id="login-container">
     <h1>Login</h1>
     <form method="post" action="/dashboard">
+      {% module xsrf_form_html() %}
       <input type="text" name="username" placeholder=" Username" required><br>
       <input type="password" name="password" placeholder=" Password" required><br>
       <input type="submit" value="Log in">
     </form>    
+    <span>Not signed up for an account?<a href="/signup">Sign up</a></span>
 </div>
 {% end %}

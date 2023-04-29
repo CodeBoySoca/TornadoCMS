@@ -96,28 +96,30 @@ p {
 
 #projects {
   width: 100%;
+
 }
 
 .project-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 35px;
-    padding-bottom: 20px;
+    margin: 25px 0 50px 0;
+    padding-bottom: 15px;
     border-bottom: 1px solid rgba(168, 168, 168, 0.2); 
 }
 
 .project-row {
     color: #f5f2f2;
     font: 600 1em Supria Sans, sans-serif;
-    flex-basis: 25%;
+    flex-basis: 20%;
     text-transform: capitalize;
     color:rgb(116, 224, 214);
+
 }
 
 .project-row span {
     font-weight: 300;
-    color: #f5f2f2;  
+    color: #f5f2f2; 
 }
 
 .project-row a {
@@ -136,7 +138,6 @@ p {
   background: coral;
   border-radius: 75px;
   margin: 5px 5px 0 5px;
-
 }
 
 .production {
@@ -256,7 +257,7 @@ input, textarea {
    outline: none; 
 }
 
-#project-container h1, #server-container h1, #dashboard-content h1   {
+#project-container h1, #server-container h1, #dashboard-content h1 {
     margin: 0 0 25px 0;
   }
 
@@ -305,3 +306,23 @@ input, textarea {
     display: block;
     cursor: pointer;
 }
+
+/* #dashboard-content div {
+    width: 100%;
+    margin: 5% auto 0 auto;
+}
+
+#dashboard-content div h1 {
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    font: 900 1.4em Supria Sans, sans-serif;
+    text-align: center;
+    color: #fafafa;
+}
+
+#dashboard-content div p {
+    font: 300 1em Supria Sans, sans-serif;
+    text-align: center;
+    color: #fafafa;
+} */
+

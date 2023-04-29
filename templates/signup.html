@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="signup-container">
+    <h1>Sign up with your mobile number</h1> 
+    <p>Enter your mobile number to receive your one time password</p>
+    <form method="post" action="/">
+        {% module xsrf_form_html() %}
+        <input type="tel" name="mobile-number" placeholder="Mobile number" required>
+        <input type="submit" value="get your signup code">
+    </form> 
+</div>
+{% end %}

@@ -1,8 +1,21 @@
 $(() => {
 
     $('#add-column').on('click', (e) => {
-        var count = 3
-        $(`<input type="text" name="columnname#{count++}" placeholder="Column Name" required>`).insertBefore('#project-container form input[type="button"]')
+        var count = 4
+        $('#project-container form div').append(`
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+           <input type="text" name="columnname${count++}" placeholder="Column Name" required>\
+        `)
     })
 
     $('#dashboard-add-project').on('click', (e) => {
@@ -16,6 +29,13 @@ $(() => {
 
         $('#send-button').on('click', (e) => {
             $('.overlay').remove()
+            $.ajax({
+                type: 'POST',
+                url: '/manage/project',
+                data: $('#project-container form').serialize()
+
+            })
+            window.location.reload()
         })    
 
     })
@@ -25,13 +45,17 @@ $(() => {
         $('body').append('<div class="overlay">\
         <div id="message-popup">\
             <h3>Deleted</h3>\
-            <p>Project has been deleted/p>\
+            <p>Project has been deleted</p>\
             <button id="send-button">send</button>\
             </div></div>').fadeIn(1500)
 
         $('#send-button').on('click', (e) => {
             $('.overlay').remove()
         }) 
+    })
+
+    $('#dropdown-filter').on('change', (e) => {
+        $('#projects').empty()
     })
 
 })

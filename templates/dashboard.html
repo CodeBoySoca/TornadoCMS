@@ -2,44 +2,6 @@
 {% block content %}
 <div id="dashboard-content">
   <h1>Dashboard</h1> 
-    <div id="dashboard-header"> 
-    <div class="filter">
-        <form method="post">
-           <select name="dropdown-filter" id="dropdown-filter" hx-get="/sort_results" hx-target=".project-container">
-              <option value="filter" selected>Filter by:</option>
-              <option value="projectname"> Project Name</option>
-              <option value="status"> Status</option>
-              <option value="date"> Date</option>
-              <option value="tech_stack">Tech Stack</option>
-           </select>
-        </form>
-    </div> 
-    </div>
-    <div id="projects">
-      {% if projects %}
-        {% for project in projects %}
-        <div class="project-container">
-            {% if project['status'] == 'development' %}
-              <span class="development"></span>
-            {% else %}
-              <span class="production"></span> 
-             {% end %}
-           <div class="project-row"><span>Project:</span> {{ project['name'] }}</div>
-           <div class="project-row"><span>Date Added:</span>  {{ project['date'] }}</div>
-           <div class="project-row"><span>Status: </span>{{ project['status'] }}</div> 
-           <div class="project-row">{{ project['tech_stack'] }}</div> 
-           <div class="project-row"><a href="/manage/project/{{ project['_id'] }}" id="remove">remove</a></div>
-           <div class="project-row"><a href="/manage/production">Mark as completed</a></div> 
-        </div>
-        {% end %}
-      {% else %}
-         <div class="project-container">
-             <h1>No projects :(</h1>
-             <p>Looks like you don&apos;t have any projects added. Click the link below to get started</p>
-             <a href="/manage/project" class="add-link">Add Project</a>
-         </div>
-      {% end %}
-        <a href="/manage/project" class="add-link">Add Project</a>
-    </div>
+      {% include 'partials/projects.html' %}
 </div>
 {% end %}

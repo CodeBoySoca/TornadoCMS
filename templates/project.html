@@ -4,6 +4,8 @@
   <h1>Add Project</h1>  
    <form method="post" action="/manage/project">
       <input type="text" name="projectname" placeholder=" Project Name" required><br>
+      <input type="hidden" name="status" value="development">
+      <input type="hidden" name="date_created" value="{{ date_created }}">
       <select name="database_name">
         <option value="database" selected>Database:</option>
         <option value="mysql">MySQL</option>
@@ -15,11 +17,12 @@
      </select><br>
       <input type="text" name="dbname" placeholder=" Database" required><br>
       <input type="text" name="tablename" placeholder=" Table Name" required><br>
-      <input type="text" name="columnname" placeholder=" Column Name" required><br>
+      <input type="text" name="columnname1" placeholder=" Column Name" required><br>
       <input type="text" name="columnname2" placeholder=" Column Name" required><br>
       <input type="text" name="columnname3" placeholder=" Column Name" required><br>
+      <div></div>
       <input type="button" value="Add Column" id="add-column"><br>
-      <select name="tech_stack">
+      <select name="framework">
          <option value="tech" selected>Web Framework:</option>
          <option value="flask">Flask</option>
          <option value="bottle">Bottle</option>

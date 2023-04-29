@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="passcode-container">
+  <h1>Enter code</h1>
+  <p>Enter the one time password sent to your mobile phone</p>
+  <input type="number" name="first-digit" placeholder="0" required>
+  <input type="number" name="second-digit" placeholder="0" required>
+  <input type="number" name="third-digit" placeholder="0" required>
+  <input type="number" name="fourth-digit" placeholder="0" required>
+  <input type="number" name="fifth-digit" placeholder="0" required>
+  <input type="submit" value="Verify">
+  <input type="button" value="Resend code">
+</div>
+{% end %}

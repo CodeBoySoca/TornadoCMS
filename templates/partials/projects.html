@@ -1,0 +1,36 @@
+
+  {% if projects %}
+     <div id="dashboard-header"> 
+      <div class="filter">
+        <form method="post">
+          <select name="dropdown_filter" id="dropdown-filter" hx-get="/filter" hx-target=".project-container"  hx-swap='innerHTML swap:1s'>
+              <option value="projectname" selected>Filter by: Project Name</option>
+              <option value="status">Filter by: Status</option>
+              <option value="date">Filter by: Date</option>
+              <option value="framework">Filter by: Framework</option>
+          </select>
+          </form>
+        </div> 
+      </div>
+
+    <div id="projects">
+      {% for project in projects %}
+        <div class="project-container">
+          <div class="project-row"><span>Project:</span> {{ project['projectname'] }}</div>
+          <div class="project-row"><span>Date Added:</span>  {{ project['date'] }}</div>
+          <div class="project-row"><span>Status: </span>{{ project['status'] }}</div> 
+          <div class="project-row">{{ project['framework'] }}</div> 
+          <div class="project-row"><a href="/manage/project/{{ project['_id'] }}" id="remove">remove</a></div>
+          <div class="project-row"><a href="/manage/production">Mark as completed</a></div> 
+        </div>
+    {% end %}
+
+{% else %}
+<div id="projects">
+    <h1>No projects :(</h1>
+    <p>Looks like you don&apos;t have any projects added. Click the link below to get started</p>
+</div>
+{% end %}
+<a href="/manage/project" class="add-link">Add Project</a>
+</div>
+
